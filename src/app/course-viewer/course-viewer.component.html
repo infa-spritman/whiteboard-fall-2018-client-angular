@@ -1,4 +1,55 @@
-<div class="container-fluid">
-  <h2>{{course.title}}</h2>
-  <app-module-list></app-module-list>
+<div class="Course">
+  <div>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+      <button class="navbar-toggler" type="button"
+              data-toggle="collapse" data-target="#navbarNavDropdown"
+              aria-controls="navbarNavDropdown"
+              aria-label="Toggle Nav" aria-expanded="false">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <ul class="navbar-nav col-md-3">
+        <li class='nav-item d-flex bd-highlight'>
+
+          <a class="nav-link p-2 bd-highlight" routerLink="/course">
+            <i
+              class="p-1 fas fa-times fa-2x"
+              aria-hidden="true"></i></a>
+          <h2
+            class="p-2 flex-grow-1 bd-highlight text-white">
+            {{course.title}}
+          </h2>
+        </li>
+
+      </ul>
+      <app-lesson-tabs></app-lesson-tabs>
+
+
+    </nav>
+
+
+    <div class="container-fluid">
+      <div class="row">
+        <nav id="leftSidebar" class="col-md-3 sidebar nav-pills">
+          <app-module-list></app-module-list>
+        </nav>
+        <div class="col-md-9">
+          <div class="row">
+           <app-topic-pills></app-topic-pills>
+            <!--</div>-->
+            <!--{this.state.selectedTopic.id >= 0 &&-->
+            <!--<Provider store={store}>-->
+            <!--<WidgetListContainer-->
+            <!--topic={this.state.selectedTopic || {}}-->
+            <!--previewMode={this.state.previewMode}-->
+            <!--togglePreview={this.togglePreview}-->
+            <!--widgetsInit={this.state.selectedTopic && this.state.selectedTopic.widgets &&-->
+            <!--this.state.selectedTopic.widgets.length ? this.state.selectedTopic.widgets : []}/>-->
+            <!--</Provider>-->
+            <!--}-->
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

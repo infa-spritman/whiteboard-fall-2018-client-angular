@@ -1,8 +1,16 @@
-.active.wbdv {
-  background-color: red;
-  border-color: red;
+ul .active {
+  background-color: #46b8da;
 }
 
-.active.wbdv a {
+
+ul li {
+  border-radius: 5px;
+  overflow:hidden;
+  margin-bottom: 1.5rem!important;
+  background-color: #343a40;
+}
+
+ul li a {
   color: white;
 }
+

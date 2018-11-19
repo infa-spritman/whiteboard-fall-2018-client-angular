@@ -15,7 +15,9 @@ import { ModuleListComponent } from './module-list/module-list.component';
 import {ModuleServiceClient} from "./services/module.service.client";
 import { LessonTabsComponent } from './lesson-tabs/lesson-tabs.component';
 import {LessonServiceClient} from "./services/lesson.service.client";
+import { TopicPillsComponent} from "./topic-pills/topic-pills.component";
 import { WidgetListComponent } from './widget-list/widget-list.component';
+import { TopicServiceClient } from "./services/topic.service.client";
 import {WidgetServiceClient} from "./services/widget.service.client";
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
@@ -27,6 +29,7 @@ import { QuizListComponent } from './quiz-list/quiz-list.component';
 import {QuizServiceClient} from "./services/quiz.service.client";
 import { QuizTakerComponent } from './quiz-taker/quiz-taker.component';
 import { QuizSubmissionsComponent } from './quiz-submissions/quiz-submissions.component';
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -38,6 +41,7 @@ import { QuizSubmissionsComponent } from './quiz-submissions/quiz-submissions.co
     CourseViewerComponent,
     ModuleListComponent,
     LessonTabsComponent,
+    TopicPillsComponent,
     WidgetListComponent,
     LoginComponent,
     RegisterComponent,
@@ -50,7 +54,8 @@ import { QuizSubmissionsComponent } from './quiz-submissions/quiz-submissions.co
   imports: [
     BrowserModule,
     FormsModule,
-    routing
+    routing,
+    HttpClientModule
   ],
   providers: [
     CourseNavigatorServiceClient,
@@ -60,7 +65,8 @@ import { QuizSubmissionsComponent } from './quiz-submissions/quiz-submissions.co
     WidgetServiceClient,
     UserServiceClient,
     SectionServiceClient,
-    QuizServiceClient
+    QuizServiceClient,
+    TopicServiceClient
   ],
   bootstrap: [AppComponent]
 })

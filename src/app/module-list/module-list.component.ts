@@ -17,18 +17,25 @@ export class ModuleListComponent implements OnInit {
 
   courseId;
   moduleId;
-  modules = [];
+  modules: Object = [];
 
   setParams(params) {
     this.courseId = params['courseId'];
     this.moduleId = params['moduleId'];
-    this.loadModules(this.courseId);
+    return this.loadModules(this.courseId);
   }
 
   loadModules(courseId) {
     this.courseId = courseId;
+    const self = this;
+    // @ts-ignore
     this.service.findModulesForCourse(courseId)
-      .then(modules => this.modules = modules);
+      .subscribe(function (modules) {
+        console.log("Inside" + modules);
+        self.modules = modules;
+      });
+    console.log("Self" + self.modules);
+
   }
 
   ngOnInit() {

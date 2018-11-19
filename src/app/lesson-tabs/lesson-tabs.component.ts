@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
 import {LessonServiceClient} from "../services/lesson.service.client";
 
@@ -30,8 +30,10 @@ export class LessonTabsComponent implements OnInit {
   loadLessons(moduleId) {
     this.moduleId = moduleId;
     console.log(moduleId);
-    this.service.findLessonsForModule(moduleId)
-      .then(lessons => this.lessons = lessons);
+    if (this.moduleId) {
+      this.service.findLessonsForModule(moduleId)
+        .then(lessons => this.lessons = lessons);
+    }
   }
 
   ngOnInit() {

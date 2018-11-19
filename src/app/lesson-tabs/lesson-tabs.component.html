@@ -1,12 +1,15 @@
-<ul class="nav nav-tabs">
-  <li *ngFor="let lesson of lessons"
-      class="nav-item">
-    <a class="nav-link"
-       [ngClass]="{'active': lesson.id == lessonId}"
-       routerLink="/course/{{courseId}}/module/{{moduleId}}/lesson/{{lesson.id}}">
-      {{lesson.title}}
-    </a>
-  </li>
-</ul>
+<div class="collapse navbar-collapse col-md-9 col-12 p-0" id="navbarNavDropdown">
+  <ul class="navbar-nav flex-column flex-sm-row flex-wrap">
+    <li [ngClass]="{'active': lesson.id == lessonId}" *ngFor="let lesson of lessons" class="'nav-item d-flex bd-highlight btn-danger m-2'">
+      <a class="nav-link mr-auto m-1 p-2 bd-highlight text-white"
+         [ngClass]="{'active': lesson.id == lessonId}"
+         routerLink="/course/{{courseId}}/module/{{moduleId}}/lesson/{{lesson.id}}">
+        {{lesson.title}}
+      </a>
+    </li>
+  </ul>
 
-<app-widget-list></app-widget-list>
+
+</div>
+
+
