@@ -1,11 +1,11 @@
 export class CourseServiceClient {
-  COURSE_URL = 'http://localhost:8080/api/course';
+  COURSE_URL = 'https://java-server-ass-7.herokuapp.com';
   findAllCourses() {
-    return fetch(this.COURSE_URL + '/all')
+    return fetch(this.COURSE_URL + '/api/course/all')
       .then(response => response.json());
   }
   findCourseById(courseId) {
-    return fetch(this.COURSE_URL + '/' + courseId)
+    return fetch(this.COURSE_URL + '/api/course/' + courseId)
       .then(response => response.json());
   }
 }

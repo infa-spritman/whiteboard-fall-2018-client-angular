@@ -1,7 +1,7 @@
 export class TopicServiceClient {
-  private Topic_URL = 'http://localhost:8080/';
+  private Topic_URL = 'https://java-server-ass-7.herokuapp.com/';
   findTopicsForLesson(lessonId) {
-    return fetch('http://localhost:8080/api/lesson/' + lessonId + '/topic')
+    return fetch(this.Topic_URL + 'api/lesson/' + lessonId + '/topic')
       .then(response => response.json());
   }
 

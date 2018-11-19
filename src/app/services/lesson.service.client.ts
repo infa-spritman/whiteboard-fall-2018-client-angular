@@ -1,7 +1,7 @@
 export class LessonServiceClient {
-  private Lesson_URL =  'http://localhost:8080/';
+  private Lesson_URL =  'https://java-server-ass-7.herokuapp.com/';
   findLessonsForModule(moduleId) {
-    return fetch('http://localhost:8080/api/module/' + moduleId + '/lesson')
+    return fetch(this.Lesson_URL + 'api/module/' + moduleId + '/lesson')
       .then(response => response.json());
   }
 

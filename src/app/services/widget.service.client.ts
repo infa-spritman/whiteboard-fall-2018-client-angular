@@ -1,7 +1,7 @@
 export class WidgetServiceClient {
-  private Widget_URL = 'http://localhost:8080/';
+  private Widget_URL = 'https://java-server-ass-7.herokuapp.com/';
   findWidgetsForTopic(topicId) {
-    return fetch('http://localhost:8080/api/topic/' + topicId + '/widget')
+    return fetch(this.Widget_URL + 'api/topic/' + topicId + '/widget')
       .then(response => response.json());
   }
 
