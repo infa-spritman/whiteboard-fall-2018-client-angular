@@ -3,7 +3,7 @@
     <li [ngClass]="{'active': lesson.id == lessonId}" *ngFor="let lesson of lessons" class="'nav-item d-flex bd-highlight btn-danger m-2'">
       <a class="nav-link mr-auto m-1 p-2 bd-highlight text-white"
          [ngClass]="{'active': lesson.id == lessonId}"
-         routerLink="/course/{{courseId}}/module/{{moduleId}}/lesson/{{lesson.id}}">
+         routerLink="/course/{{courseId}}/module/{{moduleId}}/lesson/{{lesson.id}}/topic">
         {{lesson.title}}
       </a>
     </li>

@@ -1,7 +1,7 @@
 <ul class="nav flex-column">
   <li [ngClass]="{'active': module.id == moduleId}" *ngFor="let module of modules"
       class="nav-item d-flex bd-highlight active">
-    <a class="nav-link p-2 flex-grow-1 bd-highlight" routerLink="/course/{{courseId}}/module/{{module.id}}">
+    <a class="nav-link p-2 flex-grow-1 bd-highlight" routerLink="/course/{{courseId}}/module/{{module.id}}/lesson">
       {{module.title}}</a>
   </li>
 </ul>

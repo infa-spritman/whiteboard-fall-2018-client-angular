@@ -2,7 +2,7 @@
   <ul id="topicTab" class="nav flex-column flex-sm-row">
     <li [ngClass]="{'active': topic.id == topicId}" *ngFor="let topic of topics" class="'nav-item d-flex bd-highlight btn-danger m-2'">
       <a class="nav-link mr-auto m-1 p-2 bd-highlight text-white"
-         routerLink="/course/{{courseId}}/module/{{moduleId}}/lesson/{{lessonId}}/topic/{{topic.id}}">
+         routerLink="/course/{{courseId}}/module/{{moduleId}}/lesson/{{lessonId}}/topic/{{topic.id}}/widget">
         {{topic.title}}
       </a>
     </li>
