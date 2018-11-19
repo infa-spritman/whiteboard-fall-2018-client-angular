@@ -29,11 +29,7 @@ export class ModuleListComponent implements OnInit {
     this.courseId = courseId;
     const self = this;
     // @ts-ignore
-    this.service.findModulesForCourse(courseId)
-      .subscribe(function (modules) {
-        // console.log("Inside" + modules);
-        self.modules = modules;
-      });
+    this.service.findModulesForCourse(courseId).then( modules => this.modules = modules);
     // console.log("Self" + self.modules);
 
   }
