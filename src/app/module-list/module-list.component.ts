@@ -31,10 +31,10 @@ export class ModuleListComponent implements OnInit {
     // @ts-ignore
     this.service.findModulesForCourse(courseId)
       .subscribe(function (modules) {
-        console.log("Inside" + modules);
+        // console.log("Inside" + modules);
         self.modules = modules;
       });
-    console.log("Self" + self.modules);
+    // console.log("Self" + self.modules);
 
   }
 

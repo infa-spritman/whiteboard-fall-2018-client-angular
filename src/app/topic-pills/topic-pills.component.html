@@ -1,8 +1,8 @@
-<div className="col-12">
-  <ul id="topicTab" className="nav flex-column flex-sm-row">
+<div class="col-12">
+  <ul id="topicTab" class="nav flex-column flex-sm-row">
     <li [ngClass]="{'active': topic.id == topicId}" *ngFor="let topic of topics" class="'nav-item d-flex bd-highlight btn-danger m-2'">
       <a class="nav-link mr-auto m-1 p-2 bd-highlight text-white"
-         routerLink="/course/{{courseId}}/module/{{moduleId}}/lesson/{{lessonId}}/{{topic.id}}">
+         routerLink="/course/{{courseId}}/module/{{moduleId}}/lesson/{{lessonId}}/topic/{{topic.id}}">
         {{topic.title}}
       </a>
     </li>
